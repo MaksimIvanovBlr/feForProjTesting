@@ -3,30 +3,38 @@ import {makeAutoObservable} from 'mobx'
 
 export default class InfoStore{
     constructor() {
-        this._basicInfo = [
-            // {id:1, name: 'reserv value', },
-            // {id:2, name: 'Smartphones'},
-            // {id:3, name: 'Smart'},
-            // {id:4, name: 'phones'}
+        this._userModel = [
+             {id:1, name: 'Ivan', email:'some@mail', password:'assassasasasa' }
         ]
-        this._brands = [
-            // {id: 1, name: 'Samsung'},
-            // {id: 2, name: 'Iphone' }
+        this._userInfo = [
+             {id: 1, reservValue: 1000, perMounth:1100, bufferMoney:3000, valuePerDay:40, salaryDay:10, realBalance:5000}
         ]
-        this._devices = [
-            // {id: 1, name: 'Iphone 12', price: 25000, rating:5, img: 'https://akket.com/wp-content/uploads/2017/04/iPhone-SE-display-1.jpg'},
-            // {id: 2, name: 'Iphone 12', price: 25000, rating:5, img: 'https://akket.com/wp-content/uploads/2017/04/iPhone-SE-display-1.jpg'},
-            // {id: 3, name: 'Iphone 12', price: 25000, rating:5, img: 'https://akket.com/wp-content/uploads/2017/04/iPhone-SE-display-1.jpg'},
-            // {id: 4, name: 'Iphone 12', price: 25000, rating:5, img: 'https://akket.com/wp-content/uploads/2017/04/iPhone-SE-display-1.jpg'},
-            // {id: 5, name: 'Iphone 12', price: 25000, rating:5, img: 'https://akket.com/wp-content/uploads/2017/04/iPhone-SE-display-1.jpg'},
-            // {id: 6, name: 'Iphone 12', price: 25000, rating:5, img: 'https://akket.com/wp-content/uploads/2017/04/iPhone-SE-display-1.jpg'},
+        this._expiditure = [
+             {id: 1, name: 'flat', value: 200, status:true, description: 'for flat', calculation:'int'},
+            {id: 2, name: 'flat', value: 21, status:true, description: 'for flat', calculation:'int'},
+            {id: 3, name: 'flat', value: 20, status:true, description: 'for flat', calculation:'int'},
+            {id: 4, name: 'flat', value: 2, status:true, description: 'for flat', calculation:'int'},
         ]
+
+        this._salary = [
+            {id: 1, name: 'salary', value: 3000, status:false, date: 'date101122', },
+            {id: 2, name: 'av', value: 1000, status:false, date: 'date101122',},
+            {id: 3, name: 'salary', value: 2700, status:true, date: 'date101122', },
+            {id: 4, name: 'av', value: 1000, status:true, date: 'date101122', },
+        ]
+
+        this._additionalIncome = [
+            {id: 1, name: 'new', value: 2000, status:true, description: 'fo', date:'date111213'},
+            {id: 2, name: 'start', value: 300, status:true, description: 'for', date:'date111213'},
+            {id: 3, name: 'prod', value: 7000, status:true, description: 'for f', date:'date111213'},
+            {id: 4, name: 'rent', value: 5000, status:true, description: 'for fl', date:'date111213'},
+        ]
+
         this._selectedType = {}
         this._selectedBrand = {}
         this._page = 1
         this._totalCount = 0
         this._limit = 3
-
 
         makeAutoObservable(this)
     }
